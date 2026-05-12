@@ -2,17 +2,24 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Управление статусом</title>
+    <title>Robo Hand Control</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div id="status-card" class="card none">
-        <span id="status-text">ОЖИДАНИЕ...</span>
+    <div class="container">
+        <div id="status-card" class="card none">
+            <span id="status-text">STATUS: NONE</span>
+        </div>
+
+        <div class="instruction">
+            <p>Для управления добавьте в конец адресной строки:</p>
+            <code>?status=knopka_on</code> — чтобы включить <br>
+            <code>?status=knopka_off</code> — чтобы выключить
+        </div>
     </div>
 
     <script>
-        // Скрипт считывает параметр из ссылки: ?status=knopka_on
         const params = new URLSearchParams(window.location.search);
         const currentStatus = params.get('status');
 
