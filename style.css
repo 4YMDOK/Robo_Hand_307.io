@@ -1,50 +1,59 @@
+/* Базовые настройки экрана */
 body {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     margin: 0;
-    background-color: #f4f7f6;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    font-family: sans-serif;
 }
 
 .container {
     text-align: center;
-    background: white;
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    min-width: 300px;
 }
 
-/* Сама плашка статуса */
+/* Стили самой плашки */
 .card {
-    display: inline-block;
-    padding: 15px 40px;
-    border-radius: 50px;
+    display: block;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
     font-size: 24px;
-    font-weight: 800;
-    color: white;
-    margin-bottom: 30px;
-    transition: 0.3s;
-    letter-spacing: 1px;
+    font-weight: bold;
+    color: #ffffff;
+    text-transform: uppercase;
 }
 
-/* Цвета */
-.on { background-color: #27ae60; box-shadow: 0 4px 15px rgba(39, 174, 96, 0.4); }
-.off { background-color: #e74c3c; box-shadow: 0 4px 15px rgba(231, 76, 60, 0.4); }
-.none { background-color: #7f8c8d; }
+/* Цвета состояний */
+.on {
+    background-color: #28a745 !important;
+}
 
+.off {
+    background-color: #dc3545 !important;
+}
+
+.none {
+    background-color: #6c757d !important;
+}
+
+/* Текст инструкции */
 .instruction {
-    border-top: 1px solid #eee;
-    padding-top: 20px;
-    color: #7f8c8d;
     font-size: 14px;
+    color: #555;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
 }
 
 code {
-    background: #f8f9fa;
-    padding: 3px 8px;
-    border-radius: 5px;
-    color: #e83e8c;
-    font-weight: bold;
+    background: #f1f1f1;
+    padding: 2px 4px;
+    color: #d63384;
+    font-family: monospace;
 }
