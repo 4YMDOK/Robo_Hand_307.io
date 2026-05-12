@@ -1,24 +1,50 @@
-/* Контейнер для центровки всего содержимого */
-.container {
-    text-align: center;
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f4f7f6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Оформление инструкции */
+.container {
+    text-align: center;
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+/* Сама плашка статуса */
+.card {
+    display: inline-block;
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-size: 24px;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 30px;
+    transition: 0.3s;
+    letter-spacing: 1px;
+}
+
+/* Цвета */
+.on { background-color: #27ae60; box-shadow: 0 4px 15px rgba(39, 174, 96, 0.4); }
+.off { background-color: #e74c3c; box-shadow: 0 4px 15px rgba(231, 76, 60, 0.4); }
+.none { background-color: #7f8c8d; }
+
 .instruction {
-    margin-top: 30px;
-    padding: 15px;
-    background: #fff;
-    border-radius: 8px;
-    border: 1px solid #ddd;
-    color: #555;
-    font-size: 0.9rem;
-    line-height: 1.6;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+    color: #7f8c8d;
+    font-size: 14px;
 }
 
 code {
-    background: #eee;
-    padding: 2px 5px;
-    border-radius: 4px;
-    font-family: monospace;
-    color: #c7254e;
+    background: #f8f9fa;
+    padding: 3px 8px;
+    border-radius: 5px;
+    color: #e83e8c;
+    font-weight: bold;
 }
